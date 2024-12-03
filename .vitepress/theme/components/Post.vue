@@ -18,6 +18,7 @@ const formattedDate = moment(props.date, "jYYYY/jMM/jDD").format("jD jMMMM jYYYY
         <h2 class="post-title">
             <a :href="url" v-text="title" />
         </h2>
+        <div v-if="image" class="thumbnail" :style="`background-image: url(${image})`" />
         <div class="post-details">
             <div>
                 <CalendarIcon size="16" />
@@ -47,11 +48,22 @@ h2.post-title {
     margin: 5px 0;
 }
 
+div.thumbnail {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 div.post-details {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     font-size: 14px;
     color: #656565;
+    margin-top: 10px;
 }
 
 .post-details div {

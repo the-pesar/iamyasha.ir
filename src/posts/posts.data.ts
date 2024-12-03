@@ -7,6 +7,7 @@ export interface IPost {
   time: string
   location: string
   url: string
+  image?: string
 }
 
 declare const data: IPost[]
