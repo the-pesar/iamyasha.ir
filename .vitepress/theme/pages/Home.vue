@@ -1,6 +1,6 @@
 <script setup>
-import BlogPreview from './BlogPreview.vue';
-import SocialLinks from './SocialLinks.vue';
+import BlogPreview from '../components/home/BlogPreview.vue';
+import SocialLinks from '../components/home/SocialLinks.vue';
 </script>
 
 <template>

@@ -4,7 +4,7 @@ html,
 body {
   direction: rtl;
   font-family: Arial, Helvetica;
-  background-color: #fff;
+  background-color: #ffffff;
   color: black;
   padding: 0;
   margin: 0;
@@ -19,7 +19,16 @@ ul {
   padding: 0;
 }
 
-main {
-  width: 90%;
-  margin: 35px auto;
+p {
+  line-height: 32px;
+  color: #323232;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
 }

@@ -10,7 +10,7 @@ import SunIcon from './icons/Sun.vue'
             <span class="yasha">یاشا</span>
         </a>
         <div>
-            <SunIcon />
+            <!-- <SunIcon /> -->
             <HamburgerMenuIcon class="menu-trigger" size="32" />
         </div>
     </nav>
@@ -21,7 +21,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
 }
 
 nav a,

@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import moment from "moment-jalaali";
 
-import CalendarIcon from './icons/Calendar.vue';
-import MapMarkerIcon from './icons/MapMarker.vue';
+import CalendarIcon from '../icons/Calendar.vue';
+import MapMarkerIcon from '../icons/MapMarker.vue';
+import ArrowLeftIcon from '../icons/ArrowLeft.vue';
 
-import { IPost } from '../../../src/posts/posts.data';
+import { IPost } from '../../../../src/posts/posts.data';
 
 const props = defineProps<IPost>()
 
@@ -30,6 +31,12 @@ const formattedDate = moment(props.date, "jYYYY/jMM/jDD").format("jD jMMMM jYYYY
             </div>
         </div>
         <p class="post-description" v-text="description" />
+        <div class="footer">
+            <a :href="url">
+                <span>ادامه خواندن</span>
+                <ArrowLeftIcon />
+            </a>
+        </div>
     </div>
 </template>
 
@@ -83,5 +90,13 @@ p.post-description {
 a {
     text-decoration: none;
     color: #333333;
+}
+
+div.footer a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
 }
 </style>
