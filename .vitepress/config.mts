@@ -1,9 +1,4 @@
 import { defineConfig } from "vitepress"
-import { injectSpeedInsights } from "@vercel/speed-insights"
-import { inject } from "@vercel/analytics"
-
-inject()
-injectSpeedInsights()
 
 const config = defineConfig({
   title: "یاشا",
