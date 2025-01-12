@@ -49,4 +49,11 @@ a {
 .menu-trigger {
     cursor: pointer;
 }
+
+
+@media only screen and (min-width: 1280px) {
+    .menu-trigger {
+        display: none;
+    }
+}
 </style>

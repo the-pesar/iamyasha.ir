@@ -19,7 +19,12 @@ const { frontmatter } = useData()
 
 <style scoped>
 main {
-  width: 90%;
   margin: 35px auto;
+}
+
+@media only screen and (max-width: 1280px) {
+  main {
+    width: 90%;
+  }
 }
 </style>

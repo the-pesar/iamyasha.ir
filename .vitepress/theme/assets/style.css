@@ -2,8 +2,9 @@
 
 html,
 body {
+  display: flex;
+  justify-content: center;
   direction: rtl;
-  font-family: Arial, Helvetica;
   background-color: #ffffff;
   color: black;
   padding: 0;
@@ -35,4 +36,15 @@ h6 {
 
 img {
   width: 100%;
+}
+
+a {
+  color: #1968ff;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1280px) {
+  div#app {
+    max-width: 750px;
+  }
 }

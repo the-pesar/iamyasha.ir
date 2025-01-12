@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import moment from "moment-jalaali";
 
-import CalendarIcon from '../icons/Calendar.vue';
-import MapMarkerIcon from '../icons/MapMarker.vue';
+// import CalendarIcon from '../icons/Calendar.vue';
+// import MapMarkerIcon from '../icons/MapMarker.vue';
 import ArrowLeftIcon from '../icons/ArrowLeft.vue';
 
 import { IPost } from '../../../../src/posts/posts.data';
@@ -21,14 +21,9 @@ const formattedDate = moment(props.date, "jYYYY/jMM/jDD").format("jD jMMMM jYYYY
         </h2>
         <div v-if="image" class="thumbnail" :style="`background-image: url(${image})`" />
         <div class="post-details">
-            <div>
-                <CalendarIcon size="16" />
-                <span>{{ formattedDate }}</span>
-            </div>
-            <div>
-                <MapMarkerIcon size="16" />
-                <span v-text="location" />
-            </div>
+            <span>{{ formattedDate }}</span>
+            <span>•</span>
+            <span>{{ location }}</span>
         </div>
         <p class="post-description" v-text="description" />
         <div class="footer">
@@ -71,14 +66,7 @@ div.post-details {
     font-size: 14px;
     color: #656565;
     margin-top: 10px;
-}
-
-.post-details div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: 700;
-    color: #656565;
+    font-weight: 500;
 }
 
 p.post-description {

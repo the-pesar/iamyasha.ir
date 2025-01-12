@@ -18,14 +18,9 @@ const formattedDate = computed(() => {
 <template>
     <h1 v-text="frontmatter.title" />
     <div class="details">
-        <div>
-            <CalendarIcon size="16" />
-            <span>{{ formattedDate }}</span>
-        </div>
-        <div>
-            <MapMarkerIcon size="16" />
-            <span v-text="frontmatter.location" />
-        </div>
+        <span>{{ formattedDate }}</span>
+        <span>•</span>
+        <span>{{ frontmatter.location }}</span>
     </div>
 </template>
 
@@ -39,14 +34,6 @@ div.details {
     display: flex;
     gap: 10px;
     color: #656565;
-}
-
-div.details div {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #656565;
+    font-weight: 500;
 }
 </style>
