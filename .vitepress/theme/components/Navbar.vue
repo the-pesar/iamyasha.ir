@@ -10,6 +10,10 @@ import SunIcon from './icons/Sun.vue'
             <span class="yasha">یاشا</span>
         </a>
         <div>
+            <!-- <ul>
+                <li>درباره من</li>
+                <li>ارتباط با من</li>
+            </ul> -->
             <!-- <SunIcon /> -->
             <HamburgerMenuIcon class="menu-trigger" size="32" />
         </div>
@@ -19,9 +23,13 @@ import SunIcon from './icons/Sun.vue'
 <style scoped>
 nav {
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    background-color: white;
+    z-index: 10;
 }
 
 nav a,
@@ -29,6 +37,17 @@ nav div {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+nav div ul {
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    color: #333333;
+}
+
+nav div ul li {
+    cursor: pointer;
 }
 
 nav a img {
